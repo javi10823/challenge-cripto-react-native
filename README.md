@@ -10,7 +10,7 @@ on how to get the app up and running...
 
 # Suggested design and assets:
 
-You can find bellow a design mockup for the challenge. Feel free to use it or create your own:
+You can find bellow a design mockup for the challenge. The app should stick as closely as possible to this one:
 https://www.figma.com/proto/sVfUI6ThTwAbLlhzbWj52Q/Mobile-Challenge-Nov-2019?node-id=1%3A4&scaling=scale-down
 
 For the assets we recommend the material icons:
@@ -29,7 +29,7 @@ Users should also be able to visualize:
 * Change in percentage in USD in the last 24h
 
 ### 3) API to get pricing and percentage change
-Feel free to use the pricing and percentage change provider of your preference. One of the simplest ones that doesn't require registration is Messari. You can find a sample bellow:
+Use the following api to obtain the crypto data:
 https://data.messari.io/api/v1/assets/btc/metrics
 
 ### 4) Remove a cryptocurrency
