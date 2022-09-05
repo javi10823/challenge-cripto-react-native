@@ -10,7 +10,7 @@ on how to get the app up and running...
 
 # Suggested design and assets:
 
-You can find bellow a design mockup for the challenge. Feel free to use it or create your own:
+You can find below a design mockup for the challenge. Please make sure you follow this design as close as possible, as it will be evaluated:
 https://www.figma.com/proto/sVfUI6ThTwAbLlhzbWj52Q/Mobile-Challenge-Nov-2019?node-id=1%3A4&scaling=scale-down
 
 For the assets we recommend the material icons:
@@ -21,7 +21,7 @@ Make sure you build your components using CSS-in-JS solution (https://styled-com
 # Main Features of the app
 
 ### 1) List of cryptocurrencies
-Users should be able to visualize the list of cryptocurrencies they current have on the app
+Users should be able to visualize the list of cryptocurrencies they currently have on the app.
 
 ### 2) Current price and percentage change in the last 24h
 Users should also be able to visualize: 
@@ -29,14 +29,13 @@ Users should also be able to visualize:
 * Change in percentage in USD in the last 24h
 
 ### 3) API to get pricing and percentage change
-Feel free to use the pricing and percentage change provider of your preference. One of the simplest ones that doesn't require registration is Messari. You can find a sample bellow:
-https://data.messari.io/api/v1/assets/btc/metrics
+Please use the following API to get cryptocurrency metrics: https://data.messari.io/api/v1/assets/btc/metrics.
 
 ### 4) Remove a cryptocurrency
 From the list, users should be able to remove a cryptocurrency from the "Crypto Tracker".
 
 ### 5) Pricing and percentage change update
-The Crypto Tracker should update the current price and percentage change in USD to the user. Chose your preferred way to update the data.
+The Crypto Tracker should update the current price and percentage change in USD to the user. Choose your preferred way to update the data.
 
 # Evaluation Criteria
 
@@ -47,4 +46,3 @@ The Crypto Tracker should update the current price and percentage change in USD 
 * Strategy to refresh data
 * Ability to write clear documentation
 * Correct typing of the components and variables used
-
