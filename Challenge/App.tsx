@@ -12,12 +12,13 @@ import {
 } from 'react-native';
 import avatar from './src/components/img/avatar.png';
 import ListOfCurrencies from './src/components/ListOfCrypto';
+import styles from './src/components/styles/stylesApp'
 
 
 const App = () => {
 
   const addCurrencyHandler = () =>{
-      console.log("Estás tocando")
+      
   }
 
 
@@ -43,39 +44,6 @@ const App = () => {
       
   );
 };
-
-const styles = StyleSheet.create({
-  areaView: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  header: {
-    flex: 0.4,
-    display: 'flex',
-    flexDirection: 'row',
-    backgroundColor: '#385775',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    width: '100%'
-  },
-  text: {
-    fontFamily: 'Inter',
-    fontWeight: "700",
-    fontSize: 20,
-    color: 'white',
-  },
-  image: {
-    width: 55,
-    height: 55,
-    borderRadius: 100 / 2,
-  },
-  pressable: {
-    color: '#385775',
-    marginTop: 25,
-    fontFamily: 'Inter',
-    fontWeight: "400",
-  }
-});
 
 
 export default App;
