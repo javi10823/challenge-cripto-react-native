@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Color from "../themes/color";
 
 export default StyleSheet.create({
     container: {
@@ -39,13 +40,13 @@ export default StyleSheet.create({
         fontFamily: 'Inter',
         fontWeight: "600",
         fontSize: 20,
-        color: 'black',
+        color: Color.Black,
     },
     symbol: {
         fontFamily: 'Inter',
         fontWeight: "400",
         fontSize: 14,
-        color: 'black',
+        color: Color.Black,
     },
     percentContainer: {
         fontFamily: 'Inter',
@@ -58,13 +59,13 @@ export default StyleSheet.create({
         paddingHorizontal: 5,
     },
     colorGreen: {
-        color: '#0A8150'
+        color: Color.Green
     },
     colorRed: {
-        color: '#DE3617'
+        color: Color.Red
     },
     line: {
-        borderBottomColor: '#E4E8EB',
+        borderBottomColor: Color.Grey,
         borderBottomWidth: 2,
         width: '85%',
     },

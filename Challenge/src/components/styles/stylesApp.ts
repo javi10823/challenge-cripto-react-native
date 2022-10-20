@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Color from "../themes/color";
 
 export default StyleSheet.create({
     areaView: {
@@ -10,7 +11,7 @@ export default StyleSheet.create({
       display: 'flex',
       paddingHorizontal: 22,
       flexDirection: 'row',
-      backgroundColor: '#385775',
+      backgroundColor: Color.Blue,
       justifyContent: 'space-between',
       alignItems: 'center',
       width: '100%'
@@ -19,7 +20,7 @@ export default StyleSheet.create({
       fontFamily: 'Inter',
       fontWeight: "700",
       fontSize: 20,
-      color: 'white',
+      color: Color.White,
     },
     image: {
       width: 55,
@@ -27,7 +28,7 @@ export default StyleSheet.create({
       borderRadius: 100 / 2,
     },
     pressable: {
-      color: '#385775',
+      color: Color.Blue,
       marginTop: 25,
       fontFamily: 'Inter',
       fontWeight: "400",
