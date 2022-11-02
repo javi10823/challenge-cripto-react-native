@@ -1,35 +1,43 @@
-export default [
-    {
-        id: 1,
-        name: 'Bitcoin',
-        symbol: 'BTC',
-        price: 7215.68,
-        percent: 1.82,
-        img: require('./img/bitcoin.png'),
-        arrowGreen: require('./img/greenarrow.png'),
-        arrowRed: require('./img/redarrow.png'),
+import React from 'react';
+import {Crypto} from './interfaces/index';
+import {
+  TextList,
+  Container,
+  CryptoLogo,
+  Line,
+  Arrow,
+  TextPercent,
+  TextSymbol,
+} from './styles/stylesList';
+import greenarrow from './img/greenarrow.png';
+import redarrow from './img/redarrow.png';
 
-    },
-    {
-        id: 2,
-        name: 'Ethereum',
-        symbol: 'ETH',
-        price: 146.83,
-        percent: 1.46,
-        img: require('./img/ethereum.png'),
-        arrowGreen: require('./img/greenarrow.png'),
-        arrowRed: require('./img/redarrow.png'),
+const List = ({item}: {item: Crypto}) => (
+  <>
+    <Container container>
+      <Container containerPaddingLP>
+        <CryptoLogo source={item.img} />
+        <Container paddingLeft>
+          <TextList> {item.name} </TextList>
+          <TextSymbol>{item.symbol}</TextSymbol>
+        </Container>
+      </Container>
+      <Container center>
+        <Container>
+          <TextList>${item.price}</TextList>
+          <Container price>
+            <Arrow source={item.percent > 0 ? greenarrow : redarrow} />
+            <TextPercent positivePercent={item.percent > 0}>
+              {Math.abs(item.percent)}%
+            </TextPercent>
+          </Container>
+        </Container>
+      </Container>
+    </Container>
+    <Container center>
+      <Line />
+    </Container>
+  </>
+);
 
-    },
-    {
-        id: 3,
-        name: 'XRP',
-        symbol: 'XRP',
-        price: 0.2265,
-        percent: -2.50,
-        img: require('./img/xrp.png'),
-        arrowRed: require('./img/redarrow.png'),
-        arrowGreen: require('./img/greenarrow.png'),
-
-    }
-]
+export default List;
