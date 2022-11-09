@@ -1,13 +1,13 @@
-// styled-components.ts
-import * as styledComponents from "styled-components/native";
+// my-theme.ts
+import { DefaultTheme } from 'styled-components';
 
-import ThemeInterface from "./theme"; //no sé de dónde importarlo
+const myTheme: DefaultTheme = {
+  borderRadius: '5px',
 
-const {
-  default: styled,
-  css,
-  ThemeProvider
-} = styledComponents as styledComponents.ReactNativeThemedStyledComponentsModule<ThemeInterface>;
+  colors: {
+    main: 'cyan',
+    secondary: 'magenta',
+  },
+};
 
-export { css, ThemeProvider };
-export default styled;
+export { myTheme };

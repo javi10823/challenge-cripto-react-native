@@ -2,7 +2,7 @@ import React from 'react';
 import {TouchableOpacity, FlatList} from 'react-native';
 import {Crypto} from './interfaces/index';
 import List from './list';
-import {Container, Text, TopBar, ProfilePhoto} from './styles/stylesCryptoList';
+import {Container, Text, TopBar, ProfilePhoto, TextTouchable} from './styles/stylesCryptoList';
 import avatar from './img/avatar.png'
 
 
@@ -39,21 +39,22 @@ const CryptocurrenciesList = () => {
   return (
     <>
       <TopBar>
-        <Text>CryptoTracker Pro</Text>
-        <ProfilePhoto source={avatar} />
-      </TopBar>
+         <Text>CryptoTracker Pro</Text>
+        <ProfilePhoto source={avatar} /> 
+      </TopBar> 
       <FlatList
         data={cryptos}
         renderItem={renderItem}
         keyExtractor={item => item.id}
       />
+      
       <Container>
         <TouchableOpacity >
-          <Text>
+          <TextTouchable>
             + Add a Cryptocurrency
-          </Text>
+          </TextTouchable>
         </TouchableOpacity>
-      </Container>
+      </Container> 
     </>
   );
 };
