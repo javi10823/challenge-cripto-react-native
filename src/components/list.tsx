@@ -1,42 +1,62 @@
 import React from 'react';
-import {Crypto} from './interfaces/index';
+import { Crypto } from './interfaces/index';
 import {
-  TextList,
   Container,
+  ContainerLogo,
   CryptoLogo,
-  Line,
+  ContainerText,
+  TextCoin,
+  TextSymbol,
+  ContainerLeft,
+  ContainerRight,
+  ContainerChange,
   Arrow,
   TextPercent,
-  TextSymbol,
+  TextGreen,
+  TextRed,
+  Line,
+
 } from './styles/stylesList';
 import greenarrow from './img/greenarrow.png';
 import redarrow from './img/redarrow.png';
 
-const List = ({item}: {item: Crypto}) => (
+const List = ({ item }: { item: Crypto }) => (
   <>
-    <Container container>
-      <Container containerPaddingLP>
-        <CryptoLogo source={item.img} />
-        <Container paddingLeft>
-          <TextList> {item.name} </TextList>
+    <Container>
+      <ContainerLeft>
+        <ContainerLogo>
+          <CryptoLogo source={item.img} />
+        </ContainerLogo>
+
+        <ContainerText>
+          <TextCoin> {item.name} </TextCoin>
           <TextSymbol>{item.symbol}</TextSymbol>
-        </Container>
-      </Container>
-      <Container center>
-        <Container>
-          <TextList>${item.price}</TextList>
-          <Container price>
-            <Arrow source={item.percent > 0 ? greenarrow : redarrow} />
-            <TextPercent positivePercent={item.percent > 0}>
-              {Math.abs(item.percent)}%
+        </ContainerText>
+      </ContainerLeft>
+      <ContainerRight>
+        <ContainerChange>
+          <TextCoin>${item.price}</TextCoin>
+          
+            <TextPercent>
+              {item.percent > 0 ? (
+                <TextGreen>
+                  <Arrow source={greenarrow} />
+                  {item.percent}%
+                </TextGreen>
+              ) : (
+                <TextRed>
+                  <Arrow source={redarrow} />
+                  {item.percent}%
+                </TextRed>
+              )}
             </TextPercent>
-          </Container>
-        </Container>
-      </Container>
+         
+        </ContainerChange>
+      </ContainerRight>
     </Container>
-    <Container center>
-      <Line />
-    </Container>
+
+
+    <Line />
   </>
 );
 

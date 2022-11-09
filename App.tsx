@@ -10,7 +10,7 @@ const App = () => {
       
     
       <SafeAreaView>
-        <CryptoList />
+         <CryptoList /> 
       </SafeAreaView>
       
   );
