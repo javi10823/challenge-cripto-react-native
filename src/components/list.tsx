@@ -1,3 +1,4 @@
+/* import React from 'react'; */
 import React from 'react';
 import { Crypto } from './interfaces/index';
 import {
@@ -29,28 +30,28 @@ const List = ({ item }: { item: Crypto }) => (
         </ContainerLogo>
 
         <ContainerText>
-          <TextCoin> {item.name} </TextCoin>
+          <TextCoin>{item.name}</TextCoin>
           <TextSymbol>{item.symbol}</TextSymbol>
         </ContainerText>
       </ContainerLeft>
       <ContainerRight>
         <ContainerChange>
           <TextCoin>${item.price}</TextCoin>
-          
-            <TextPercent>
-              {item.percent > 0 ? (
-                <TextGreen>
-                  <Arrow source={greenarrow} />
-                  {item.percent}%
-                </TextGreen>
-              ) : (
-                <TextRed>
-                  <Arrow source={redarrow} />
-                  {item.percent}%
-                </TextRed>
-              )}
-            </TextPercent>
-         
+
+          <TextPercent>
+            {item.percent > 0 ? (
+              <>
+                <Arrow source={greenarrow} />
+                <TextGreen> {item.percent}% </TextGreen>
+              </>
+            ) : (
+              <>
+                <Arrow source={redarrow} />
+                <TextRed> {item.percent}% </TextRed>
+              </>
+            )}
+          </TextPercent>
+
         </ContainerChange>
       </ContainerRight>
     </Container>

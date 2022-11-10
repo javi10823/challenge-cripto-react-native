@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import theme from '../../../config/utils/themes';
 import {Text as TextRN, View as ViewRN, Image as ImageRN} from 'react-native';
 
@@ -30,7 +30,7 @@ export const ContainerLogo = styled(ViewRN)`
 export const ContainerText = styled(ViewRN)`  
   display: flex;
   justify-content: center;
-  text-align: left; 
+  text-align: left;
  
 `;
 
@@ -67,16 +67,14 @@ export const ContainerChange = styled(ViewRN)`
   padding: 24px;
 `;
 export const TextPercent = styled(TextRN)`
-  textalign: right;
-  width: auto;
   flex-direction: row;
   justify-content: flex-end;
+  
 `;
 
 export const TextGreen = styled(TextRN)`
   color: ${theme.Green};
   font-size: 14px;
-  padding: 5px;
 `;
 
 export const TextRed = styled(TextRN)`
@@ -88,17 +86,19 @@ export const Line = styled(TextRN)`
   background-color: ${theme.LineGrey};
   height: 2px;
   width: 85%;
-  margin-vertical: 20px;
+  margin-vertical: 10px;
   margin-horizontal: 24px;
 `;
 
 export const CryptoLogo = styled(ImageRN)`
   width: 50px;
   height: 50px;
+  
 
 `;
 
 export const Arrow = styled(ImageRN)`
   width: 13px;
   height: 13px;
+  
 `;

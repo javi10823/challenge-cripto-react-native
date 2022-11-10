@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import Color from '../../../config/utils/themes';
 import {Text as TextRN, Image as ImageRN, View as ViewRN} from 'react-native'
 
@@ -9,7 +9,7 @@ export const TopBar = styled(ViewRN)`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   
 `;
 
