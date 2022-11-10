@@ -1,9 +1,9 @@
 import React from 'react';
 import {TouchableOpacity, FlatList} from 'react-native';
-import {Crypto} from './interfaces/index';
-import List from './list';
-import {Container, Text, TopBar, ProfilePhoto, TextTouchable} from './styles/stylesCryptoList';
-import avatar from './img/avatar.png'
+import {Crypto} from '../interfaces/index';
+import List from '../list/index';
+import {Container, Text, TopBar, ProfilePhoto, TextTouchable} from '../cryptoList/styles';
+import avatar from '../../assets/img/avatar.png'
 
 
 const CryptocurrenciesList = () => {
@@ -14,7 +14,7 @@ const CryptocurrenciesList = () => {
       symbol: 'BTC',
       price: 19218.36,
       percent: -0.79,
-      img: require('./img/bitcoin.png'),
+      img: require('../../assets/img/bitcoin.png'),
     },
     {
       id: '2',
@@ -22,7 +22,7 @@ const CryptocurrenciesList = () => {
       symbol: 'ETH',
       price: 1302.547,
       percent: 1.2,
-      img: require('./img/ethereum.png'),
+      img: require('../../assets/img/ethereum.png'),
     },
     {
       id: '3',
@@ -30,7 +30,7 @@ const CryptocurrenciesList = () => {
       symbol: 'XRP',
       price: 0.489701,
       percent: 0.47,
-      img: require('./img/xrp.png'),
+      img: require('../../assets/img/xrp.png'),
     },
   ];
 
@@ -45,7 +45,7 @@ const CryptocurrenciesList = () => {
       <FlatList
         data={cryptos}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
+        keyExtractor={({id}) => id}
       />
       
       <Container>

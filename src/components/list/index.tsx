@@ -1,6 +1,6 @@
 /* import React from 'react'; */
 import React from 'react';
-import { Crypto } from './interfaces/index';
+import { Crypto } from '../interfaces/index';
 import {
   Container,
   ContainerLogo,
@@ -17,9 +17,9 @@ import {
   TextRed,
   Line,
 
-} from './styles/stylesList';
-import greenarrow from './img/greenarrow.png';
-import redarrow from './img/redarrow.png';
+} from '../list/styles';
+import GreenArrow from '../../assets/img/GreenArrow.png';
+import RedArrow from '../../assets/img/RedArrow.png';
 
 const List = ({ item }: { item: Crypto }) => (
   <>
@@ -28,7 +28,6 @@ const List = ({ item }: { item: Crypto }) => (
         <ContainerLogo>
           <CryptoLogo source={item.img} />
         </ContainerLogo>
-
         <ContainerText>
           <TextCoin>{item.name}</TextCoin>
           <TextSymbol>{item.symbol}</TextSymbol>
@@ -37,26 +36,22 @@ const List = ({ item }: { item: Crypto }) => (
       <ContainerRight>
         <ContainerChange>
           <TextCoin>${item.price}</TextCoin>
-
           <TextPercent>
             {item.percent > 0 ? (
               <>
-                <Arrow source={greenarrow} />
+                <Arrow source={GreenArrow} />
                 <TextGreen> {item.percent}% </TextGreen>
               </>
             ) : (
               <>
-                <Arrow source={redarrow} />
+                <Arrow source={RedArrow} />
                 <TextRed> {item.percent}% </TextRed>
               </>
             )}
           </TextPercent>
-
         </ContainerChange>
       </ContainerRight>
     </Container>
-
-
     <Line />
   </>
 );
