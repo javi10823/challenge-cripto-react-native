@@ -1,4 +1,3 @@
-/* import React from 'react'; */
 import React from 'react';
 import { Crypto } from '../interfaces/index';
 import {

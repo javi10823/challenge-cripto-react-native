@@ -1,4 +1,3 @@
-import React from 'react';
 import {TouchableOpacity, FlatList} from 'react-native';
 import {Crypto} from '../interfaces/index';
 import List from '../list/index';
