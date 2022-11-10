@@ -64,16 +64,12 @@ export const ContainerChange = styled(ViewRN)`
 export const TextPercent = styled(TextRN)`
   flex-direction: row;
   justify-content: flex-end;
-`;
-
-export const TextGreen = styled(TextRN)`
-  color: ${theme.colors.green};
   font-size: 14px;
 `;
 
-export const TextRed = styled(TextRN)`
-  color: ${theme.colors.red};
-  font-size: 14px;
+export const TextPercentage = styled(TextRN)`
+  color: ${props =>
+    props.positive ? theme.colors.green : theme.colors.red};
 `;
 
 export const Line = styled(TextRN)`

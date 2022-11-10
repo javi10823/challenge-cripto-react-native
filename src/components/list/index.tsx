@@ -13,8 +13,7 @@ import {
   ContainerChange,
   Arrow,
   TextPercent,
-  TextGreen,
-  TextRed,
+  TextPercentage,
   Line,
 
 } from '../list/styles';
@@ -37,17 +36,8 @@ const List = ({ item }: { item: Crypto }) => (
         <ContainerChange>
           <TextCoin>${item.price}</TextCoin>
           <TextPercent>
-            {item.percent > 0 ? (
-              <>
-                <Arrow source={GreenArrow} />
-                <TextGreen> {item.percent}% </TextGreen>
-              </>
-            ) : (
-              <>
-                <Arrow source={RedArrow} />
-                <TextRed> {item.percent}% </TextRed>
-              </>
-            )}
+            <Arrow source={item.percent > 0 ? GreenArrow : RedArrow} />
+            <TextPercentage positive={item.percent > 0}> {item.percent}% </TextPercentage>
           </TextPercent>
         </ContainerChange>
       </ContainerRight>
